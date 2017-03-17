@@ -1,0 +1,9 @@
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\obj\x86\Debug\NotificadorExistencias.frmArticulos.resources
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\obj\x86\Debug\NotificadorExistencias.Properties.Resources.resources
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\obj\x86\Debug\NotificadorExistencias.csproj.GenerateResource.Cache
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\bin\Debug\NotificadorExistencias.exe
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\bin\Debug\NotificadorExistencias.pdb
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\obj\x86\Debug\NotificadorExistencias.exe
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\obj\x86\Debug\NotificadorExistencias.pdb
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\bin\Debug\Images\close.bmp
+G:\Github\Notificador_Existencias_08Mar2017\NotificadorExistencias\bin\Debug\Images\skin.bmp
