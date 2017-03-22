@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificadorExistencias", "NotificadorExistencias.csproj", "{E06E9B36-7B42-4780-82B1-F275A7CE7492}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "notifExistencias", "..\notifExistencias\notifExistencias.vdproj", "{B95F3CC7-84EB-4977-88E1-85D22F108C4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,8 @@ Global
 		{E06E9B36-7B42-4780-82B1-F275A7CE7492}.Debug|x86.Build.0 = Debug|x86
 		{E06E9B36-7B42-4780-82B1-F275A7CE7492}.Release|x86.ActiveCfg = Release|x86
 		{E06E9B36-7B42-4780-82B1-F275A7CE7492}.Release|x86.Build.0 = Release|x86
+		{B95F3CC7-84EB-4977-88E1-85D22F108C4F}.Debug|x86.ActiveCfg = Debug
+		{B95F3CC7-84EB-4977-88E1-85D22F108C4F}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

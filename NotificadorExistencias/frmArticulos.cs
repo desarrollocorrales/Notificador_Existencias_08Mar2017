@@ -430,6 +430,7 @@ namespace NotificadorExistencias
         {
             if (this._inicaA.ToLower().Equals("true"))
             {
+                this.guardarDatos();
                 this.Hide();
                 this.tAccion.Start();
             }
@@ -529,7 +530,22 @@ namespace NotificadorExistencias
 
         private void btnActLista_Click(object sender, EventArgs e)
         {
-            this.cargaInfo();
+            try
+            {
+                if (string.IsNullOrEmpty(this._inicaA))
+                    throw new Exception("No se ha definido la configuración");
+
+                this.cargaInfo();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "Notificador de Existencias", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgvInsumos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

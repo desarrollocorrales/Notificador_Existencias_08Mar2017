@@ -38,9 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnConfig = new System.Windows.Forms.Button();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.notificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnGuardaCambios = new System.Windows.Forms.Button();
             this.btnActLista = new System.Windows.Forms.Button();
-            this.notificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mostrarDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idInsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,7 +116,12 @@
             this.dgvInsumos.Name = "dgvInsumos";
             this.dgvInsumos.Size = new System.Drawing.Size(598, 280);
             this.dgvInsumos.TabIndex = 3;
+            this.dgvInsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInsumos_CellContentClick);
             this.dgvInsumos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInsumos_CellEndEdit);
+            // 
+            // notificacionBindingSource
+            // 
+            this.notificacionBindingSource.DataSource = typeof(NotificadorExistencias.Modelos.Notificacion);
             // 
             // btnGuardaCambios
             // 
@@ -138,10 +143,6 @@
             this.btnActLista.TabIndex = 5;
             this.btnActLista.UseVisualStyleBackColor = true;
             this.btnActLista.Click += new System.EventHandler(this.btnActLista_Click);
-            // 
-            // notificacionBindingSource
-            // 
-            this.notificacionBindingSource.DataSource = typeof(NotificadorExistencias.Modelos.Notificacion);
             // 
             // mostrarDataGridViewCheckBoxColumn
             // 
@@ -185,7 +186,7 @@
             // mostrarXAlmacenDataGridViewCheckBoxColumn
             // 
             this.mostrarXAlmacenDataGridViewCheckBoxColumn.DataPropertyName = "mostrarXAlmacen";
-            this.mostrarXAlmacenDataGridViewCheckBoxColumn.HeaderText = "Mostrar por Almacen";
+            this.mostrarXAlmacenDataGridViewCheckBoxColumn.HeaderText = "Mostrar por Almacén";
             this.mostrarXAlmacenDataGridViewCheckBoxColumn.Name = "mostrarXAlmacenDataGridViewCheckBoxColumn";
             this.mostrarXAlmacenDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.mostrarXAlmacenDataGridViewCheckBoxColumn.Width = 110;

@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tbUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(9, 66);
+            this.groupBox1.Location = new System.Drawing.Point(9, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(329, 346);
             this.groupBox1.TabIndex = 15;
@@ -179,7 +179,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.Location = new System.Drawing.Point(238, 425);
+            this.btnGuardar.Location = new System.Drawing.Point(238, 411);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(96, 30);
             this.btnGuardar.TabIndex = 16;
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 467);
+            this.ClientSize = new System.Drawing.Size(346, 452);
             this.Controls.Add(this.cbIniciarApp);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox1);
