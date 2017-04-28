@@ -312,56 +312,12 @@ namespace NotificadorExistencias
                     
                 }
 
-                // busca los insumos agotados segun lo definido en la lista por el usuario
-                /*
-                this._lista.Add("uno");
-                this._lista.Add("dos");
-                this._lista.Add("tres");
-                this._lista.Add("cuatro");
-                this._lista.Add("cinco");
-                this._lista.Add("seis");
-                this._lista.Add("siete");
-                */
-                //this._lista = new List<string>();
-
                 if (!this.bwAccion.IsBusy)
                     this.bwAccion.RunWorkerAsync();
 
                 this._index = 0;
             }
 
-
-
-
-
-            /*
-            // buscar en la bd cuales articulos faltan y los va a vaciar en una lista
-            this._lista.Add("uno");
-            this._lista.Add("dos");
-            this._lista.Add("tres");
-            this._lista.Add("cuatro");
-            this._lista.Add("cinco");
-            this._lista.Add("seis");
-            this._lista.Add("siete");
-
-            int count = this._lista.Count;
-
-            int i = 0;
-
-            while (count > i)
-            {
-                
-                if (!this.bwAccion.IsBusy)
-                    this.bwAccion.RunWorkerAsync(4);
-                
-                //mandar(this._lista[i]);
-            /*
-                i++;
-            }
-
-
-            this._lista.Clear();
-            */
         }
 
         void mandar(string leyenda)
@@ -370,7 +326,7 @@ namespace NotificadorExistencias
             this._tnNotificador.TitleClickable = false;
             this._tnNotificador.ContentClickable = false;
             this._tnNotificador.EnableSelectionRectangle = false;
-            this._tnNotificador.KeepVisibleOnMousOver = true;	// Added Rev 002
+            this._tnNotificador.KeepVisibleOnMousOver = true;	    // Added Rev 002
             this._tnNotificador.ReShowOnMouseOver = true;			// Added Rev 002
 
             this._tnNotificador.Show("EXISTENCIA ACTUAL",
@@ -381,36 +337,14 @@ namespace NotificadorExistencias
         private void bwAccion_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(6000);
-            
-            /*
-            this._tnNotificador.CloseClickable = true;
-            this._tnNotificador.TitleClickable = true;
-            this._tnNotificador.ContentClickable = true;
-            this._tnNotificador.EnableSelectionRectangle = true;
-            this._tnNotificador.KeepVisibleOnMousOver = true;	// Added Rev 002
-            this._tnNotificador.ReShowOnMouseOver = true;			// Added Rev 002
-
-            this._tnNotificador.Show("SIN EXISTENCIA",
-                "tsyrdtfjyvghkbjk",
-                500, 5000, 500);
-            */
         }
 
         private void bwAccion_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //this.tAccion.Stop();
-
-            //foreach (string s in this._lista)
-            //{
-
             if (this._index < this._lista.Count)
                 mandar(this._lista[this._index]);
             else
                 this._lista.Clear();
-                
-            //}
-
-            //this.tAccion.Start();
         }
 
         private void niIconoNotif_MouseDoubleClick(object sender, MouseEventArgs e)

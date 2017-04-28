@@ -179,7 +179,20 @@ namespace NotificadorExistencias.Datos
                     }
                     else
                     {
-                        string sql = "select SUM(cantidad) as cantidad from movsinv where idinsumo = @idInsumo";
+                        // string sql = "select SUM(cantidad) as cantidad from movsinv where idinsumo = @idInsumo";
+                        string sql =
+                            "select sum(s.cantidad) as existencia " +
+                            "from " +
+                                "( " +
+                                "select SUM(cantidad) as cantidad from movsinv where idinsumo = @idInsumo " +
+                                "union all " +
+                                "select (tcd.cantidad * c.cantidad) * -1 as cantidad " +
+                                "from productos p " +
+                                "inner join tempcheqdet tcd on (p.idproducto = tcd.idproducto) " +
+                                "left join costos c on (p.idproducto = c.idproducto) " +
+                                "left join insumos i on (c.idinsumo = i.idinsumo) " +
+                                "where i.idinsumo = @idInsumo " +
+                                ") as s";
 
                         cmd.Parameters.AddWithValue("idInsumo", idInsumo);
 
@@ -189,7 +202,7 @@ namespace NotificadorExistencias.Datos
                         {
                             while (res.reader.Read())
                             {
-                                decimal cantidad = res.reader["cantidad"] == DBNull.Value ? 0 : Convert.ToDecimal(res.reader["cantidad"]);
+                                decimal cantidad = res.reader["existencia"] == DBNull.Value ? 0 : Convert.ToDecimal(res.reader["existencia"]);
 
                                 if (cantidad < falta)
                                     result = cantidad.ToString();
